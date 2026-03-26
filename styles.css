@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+@keyframes lift {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#title {
+    display: inline-block;
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #333; 
+    animation: shake 0.8s ease-in-out infinite;
+}
+
+#title span {
+    display: inline-block;
+    animation: lift 1s ease-in-out infinite;
+}
+
+#title span:nth-child(1) { animation-delay: 0s; }
+#title span:nth-child(2) { animation-delay: 0.1s; }
+#title span:nth-child(3) { animation-delay: 0.2s; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    background-color: rgba(103, 150, 160, 0.1); 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu, .settings, .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Les boutons */
+.menu button, .settings button, .game button {
+    background-color: rgb(128, 172, 184);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 20px; 
+    border: none; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu button:hover, .settings button:hover, .game button:hover {
+    background-color: rgb(168, 211, 221);
+    border-radius: 5px;
+}
+
+/* Grille */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}

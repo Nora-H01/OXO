@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu OXO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title"><strong><span>O</span>
+            <span>X</span>
+            <span>O</span></strong></h1>
+        <div class="menu">
+            <button id="modeTwoPlayers">Deux Joueurs</button>
+            <button id="modeVsComputer">Jouer Contre l'Ordinateur</button>
+            <button id="settingsButton">Paramètres</button>
+        </div>
+
+    <div class="settings" style="display: none;">
+        <button id="size3x3">Grille 3x3</button>
+        <button id="size4x4">Grille 4x4</button>
+        <button id="size5x5">Grille 5x5</button>
+        <button id="backToMenu">Retour au menu</button>
+    </div>
+    
+    <div class="game" style="display: none;">
+        <div id="playerSelection" style="display: none;">
+            <h2>Choisissez votre symbole</h2>
+            <button id="selectX">Je veux X</button>
+            <button id="selectO">Je veux O</button>
+        </div>
+        <div class="board"></div>
+        <button id="restartButton">Recommencer</button>
+        <div id="message"></div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
